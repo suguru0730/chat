@@ -143,7 +143,23 @@ $(function() {
     // チャットとかファイルが飛んできたらdataでonになる
     // ここではファイルは使わないのでもとのサンプルのif文はけしておく
     room.on('data', message => {
+      
+      ///////////////////////////////////
+      
+      if (message.data=="mario"){
+        
+      var audioElem　= new Audio();　//音楽
+      audioElem.src = "Mario.mp3";
+      audioElem.play();
+      
+      }else{
+        
       messages.prepend('<div><span class="peer">' + message.src.substr(0,8) + '</span>: ' + message.data + '</div>');
+        
+      }
+      
+      ///////////////////////////////////
+     
     });
 
     room.on('peerJoin', peerId => {
