@@ -152,6 +152,12 @@ $(function() {
       audioElem.src = "Mario.mp3";
       audioElem.play();
       
+      }elseif(message.data=="down"){
+        
+      var audioElem　= new Audio();　//音楽
+      audioElem.src = "Down.mp3";
+      audioElem.play();
+        
       }else{
         
       messages.prepend('<div><span class="peer">' + message.src.substr(0,8) + '</span>: ' + message.data + '</div>');
