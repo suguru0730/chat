@@ -152,7 +152,7 @@ $(function() {
       audioElem.src = "Mario.mp3";
       audioElem.play();
       
-      }elseif(message.data=="down"){
+      }else if(message.data=="down"){
         
       var audioElem　= new Audio();　//音楽
       audioElem.src = "Down.mp3";
